@@ -1,0 +1,42 @@
+﻿<Window x:Class="Trafika.Forme.frmFiskalniRacun"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trafika.Forme"
+        mc:Ignorable="d"        
+        Title="Fiskalni račun" Height="522.806" Width="398.097" 
+        Icon="C:\Users\defaultuser0\OneDrive\2. godina\Treci semestar\Poslovni informacioni sistemi\Vezbe\Trafika\Ikonice\Fiskalni racun.png" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" FontWeight="DemiBold">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard Duration="00:00:3" Storyboard.TargetProperty="Opacity">
+                    <DoubleAnimation From="0" To="1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid Background="LightSkyBlue">
+        <Label Content="Datum izdavanja" HorizontalAlignment="Left" Margin="43,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vreme izdavanja" HorizontalAlignment="Left" Margin="41,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Mesto izdavanja" HorizontalAlignment="Left" Margin="41,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Količina" HorizontalAlignment="Left" Margin="43,190,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cena" HorizontalAlignment="Left" Margin="43,240,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prodavac" HorizontalAlignment="Left" Margin="43,290,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label Content="Proizvod" HorizontalAlignment="Left" Margin="43,340,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kupac" HorizontalAlignment="Left" Margin="43,390,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DatumIzdavanja" Margin="227,39,34,0" VerticalAlignment="Top"/>
+        <TextBox x:Name ="txtVremeIzdavanja" HorizontalAlignment="Left" Height="23" Margin="227,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="txtMestoIzdavanja"  HorizontalAlignment="Left" Height="23" Margin="227,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="txtKolicina" HorizontalAlignment="Left" Height="23" Margin="227,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name ="txtCena" HorizontalAlignment="Left" Height="23" Margin="227,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name ="cbxProdavac" HorizontalAlignment="Left" Margin="227,290,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Prodavac" SelectedValuePath="ProdavacID" Cursor="Hand"/>
+        <ComboBox x:Name ="cbxProizvod" HorizontalAlignment="Left" Margin="227,340,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Proizvod" SelectedValuePath="ProizvodID" Cursor="Hand"/>
+        <ComboBox x:Name ="cbxKupac" HorizontalAlignment="Left" Margin="227,390,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="BrojMobilnogTelefona" SelectedValuePath="KupacID" Cursor="Hand"/>
+        <Button x:Name ="btnSacuvaj" Content="Sačuvaj" HorizontalAlignment="Left" Margin="19,453,0,0" VerticalAlignment="Top" Width="132" Click="btnSacuvaj_Click" Background="LawnGreen" Cursor="Hand"/>
+        <Button x:Name ="btnOtkazi" Content="Otkaži" HorizontalAlignment="Left" Margin="227,453,0,0" VerticalAlignment="Top" Width="132" Click="btnOtkazi_Click" Background="Red" Cursor="Hand"/>
+    </Grid>
+</Window>

@@ -1,0 +1,59 @@
+﻿<Window x:Class="Trafika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trafika"
+        mc:Ignorable="d"
+        Title="Trafika" Height="470" Width="740" Icon="C:\Users\defaultuser0\OneDrive\2. godina\Treci semestar\Poslovni informacioni sistemi\Vezbe\Trafika\Ikonice\Trafika.ico"
+        WindowStartupLocation="CenterScreen" FontWeight="DemiBold">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource= "C:\Users\defaultuser0\OneDrive\2. godina\Treci semestar\Poslovni informacioni sistemi\Vezbe\Trafika\Ikonice\Pozadina.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <DataGrid x:Name="dataGridCentralni" HorizontalAlignment="Center" Height="auto" VerticalAlignment="Center" Width="auto" AlternatingRowBackground="LightBlue" IsReadOnly="True" CanUserAddRows="False" 
+                  SelectionUnit="FullRow" SelectionMode="Single" CanUserResizeRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False"/>
+
+        <StackPanel HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="auto" Orientation="Horizontal">
+            <Button x:Name="btnProizvodi" Content="Prozvodi" HorizontalAlignment="Left" Width="92" Height="30" VerticalAlignment="Top" Click="btnProizvodi_Click" Background="LightBlue" Cursor="Hand"/>
+            <Button x:Name="btnVrsteProizvoda" Content="Vrste proizvoda" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="92" Height="30" Click="btnVrsteProizvoda_Click" Background="LightSkyBlue" Cursor="Hand"/>
+            <Button x:Name="btnProizvodjaci" Content="Proizvođači" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="30" Click="btnProizvodjaci_Click" Background="LightBlue" Cursor="Hand"/>
+            <Button x:Name="btnDobavljaci" Content="Dobavljači" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="30" Click="btnDobavljaci_Click" Background="LightSkyBlue" Cursor="Hand"/>
+            <Button x:Name="btnKupci" Content="Kupci" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="30" Click="btnKupci_Click" Background="LightBlue" Cursor="Hand"/>
+            <Button x:Name="btnProdavci" Content="Prodavci" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="92" Height="30" Click="btnProdavci_Click" Background="LightSkyBlue" Cursor="Hand"/>
+            <Button x:Name="btnFiskalniRacuni" Content="Fiskalni računi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="30" Click="btnFiskalniRacuni_Click" Background="LightBlue" Cursor="Hand"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Height="30" VerticalAlignment="Bottom" Width="372" Orientation="Horizontal" Cursor="Hand">
+            <Button x:Name="btnDodajProizvod" Content="Dodaj proizvod" Width="124" Click="btnDodajProizvod_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniProizvod" Content="Izmeni proizvod" Width="124" Click="btnIzmeniProizvod_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiProizvod" Content="Obriši proizvod" Width="124" Click="btnObrisiProizvod_Click" Background="Red" Cursor="Hand"/>
+            
+            <Button x:Name="btnDodajKupca" Content="Dodaj kupca" Width="124" Click="btnDodajKupca_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniKupca" Content="Izmeni kupca" Width="124" Click="btnIzmeniKupca_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiKupca" Content="Obriši kupca" Width="124" Click="btnObrisiKupca_Click" Background="Red" Cursor="Hand"/>
+            
+            <Button x:Name="btnDodajDobavljaca" Content="Dodaj dobavljača" Width="124" Click="btnDodajDobavljaca_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniDobavljaca" Content="Izmeni dobavljača" Width="124" Click="btnIzmeniDobavljaca_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiDobavljaca" Content="Obriši dobavljača" Width="124" Click="btnObrisiDobavljaca_Click" Background="Red" Cursor="Hand"/>
+            
+            <Button x:Name="btnDodajProdavca" Content="Dodaj prodavca" Width="124" Click="btnDodajProdavca_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniProdavca" Content="Izmeni prodavca" Width="124" Click="btnIzmeniProdavca_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiProdavca" Content="Obriši prodavca" Width="124" Click="btnObrisiProdavca_Click" Background="Red" Cursor="Hand"/>
+            
+            <Button x:Name="btnDodajFiskalniRacun" Content="Dodaj fiskalni račun" Width="124" Click="btnDodajFiskalniRacun_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniFiskalniRacun" Content="Izmeni fiskalni račun" Width="124" Click="btnIzmeniFiskalniRacun_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiFiskalniRacun" Content="Obriši fiskalni račun" Width="124" Click="btnObrisiFiskalniRacun_Click" Background="Red" Cursor="Hand"/>
+            
+            <Button x:Name="btnDodajVrstuProizvoda" Content="Dodaj vrstu proizvoda" Width="124" Click="btnDodajVrstuProizvoda_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniVrstuProizvoda" Content="Izmeni vrstu proizvoda" Width="124" Click="btnIzmeniVrstuProizvoda_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiVrstuProizvoda" Content="Obriši vrstu proizvoda" Width="124" Click="btnObrisiVrstuProizvoda_Click" Background="Red" Cursor="Hand"/>
+            
+            <Button x:Name="btnDodajProizvodjaca" Content="Dodaj proizvođača" Width="124" Click="btnDodajProizvodjaca_Click" Background="LawnGreen" Cursor="Hand"/>
+            <Button x:Name="btnIzmeniProizvodjaca" Content="Izmeni proizvođača" Width="124" Click="btnIzmeniProizvodjaca_Click" Background="Aquamarine" Cursor="Hand"/>
+            <Button x:Name="btnObrisiProizvodjaca" Content="Obriši proizvođača" Width="124" Click="btnObrisiProizvodjaca_Click" Background="Red" Cursor="Hand"/>
+        </StackPanel>
+    </Grid>
+</Window>

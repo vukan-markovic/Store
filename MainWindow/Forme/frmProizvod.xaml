@@ -1,0 +1,37 @@
+﻿<Window x:Class="Trafika.Forme.frmProizvod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trafika.Forme"
+        mc:Ignorable="d"
+        Title="Proizvod" Height="403.306" Width="387.097" Icon="C:\Users\defaultuser0\OneDrive\2. godina\Treci semestar\Poslovni informacioni sistemi\Vezbe\Trafika\Ikonice\Proizvod.png" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" FontWeight="DemiBold">
+    
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard Duration="00:00:3" Storyboard.TargetProperty="Opacity">
+                    <DoubleAnimation From="0" To="1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+   
+    <Grid Background="LightSkyBlue">
+        <Label Content="Cena" HorizontalAlignment="Left" Margin="43,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="Naziv" HorizontalAlignment="Left" Margin="43,77,0,0" VerticalAlignment="Top"/>
+        <Label Content="Šifra" HorizontalAlignment="Left" Margin="43,126,0,0" VerticalAlignment="Top"/>
+        <Label Content="Proizvođač" HorizontalAlignment="Left" Margin="43,178,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vrsta proizvoda" HorizontalAlignment="Left" Margin="43,222,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dobavljač" HorizontalAlignment="Left" Margin="43,271,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCena" HorizontalAlignment="Left" Height="23" Margin="227,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNaziv" HorizontalAlignment="Left" Height="23" Margin="227,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtSifra" HorizontalAlignment="Left" Height="23" Margin="227,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbxProizvodjac" HorizontalAlignment="Left" Margin="227,178,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="NazivProizvodjaca" SelectedValuePath="ProizvodjacID" Cursor="Hand"/>
+        <ComboBox x:Name="cbxVrstaProizvoda" HorizontalAlignment="Left" Margin="227,222,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="NazivVrsteProizvoda" SelectedValuePath="VrstaProizvodaID" Cursor="Hand"/>
+        <ComboBox x:Name="cbxDobavljac" HorizontalAlignment="Left" Margin="227,271,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="NazivFirme" SelectedValuePath="DobavljacID" Cursor="Hand"/>
+        <Button x:Name ="btnSacuvaj" Content="Sačuvaj" HorizontalAlignment="Left" Margin="24,334,0,0" VerticalAlignment="Top" Width="132" Click="btnSacuvaj_Click" Background="LawnGreen" Cursor="Hand"/>
+        <Button x:Name ="btnOtkazi" Content="Otkaži" HorizontalAlignment="Left" Margin="227,334,0,0" VerticalAlignment="Top" Width="132" Click="btnOtkazi_Click" Background="Red" Cursor="Hand"/>
+    </Grid>
+</Window>

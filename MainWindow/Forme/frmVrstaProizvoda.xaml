@@ -1,0 +1,28 @@
+﻿<Window x:Class="Trafika.Forme.frmVrstaProizvoda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trafika.Forme"
+        mc:Ignorable="d"
+        Title="Vrsta proizvoda" Height="210.902" Width="457.895"
+        Icon="C:\Users\defaultuser0\OneDrive\2. godina\Treci semestar\Poslovni informacioni sistemi\Vezbe\Trafika\Ikonice\Vrsta Proizvoda.png" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" FontWeight="DemiBold">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard Duration="00:00:3" Storyboard.TargetProperty="Opacity">
+                    <DoubleAnimation From="0" To="1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid Background="LightSkyBlue">
+        <Label Content=" Naziv vrste proizvoda" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="160"/>
+        <TextBox x:Name="txtNazivVrsteProizvoda" HorizontalAlignment="Left" Height="26" Margin="187,35,-145,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="btnSacuvaj" Content="Sačuvaj" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Width="171" Height="26" Click="btnSacuvaj_Click" Background="LawnGreen" Cursor="Hand"/>
+        <Button x:Name="btnOtkazi" Content="Otkaži" HorizontalAlignment="Left" Margin="266,111,-145,0" VerticalAlignment="Top" Width="171" Height="26" Click="btnOtkazi_Click" Background="Red" Cursor="Hand"/>
+    </Grid>
+</Window>
