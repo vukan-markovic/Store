@@ -10,3 +10,7 @@ The application should provide the ability to display data on completed purchase
 It should also provide the possibility of adding, modifying and deleting data on the specified entities.
 
 [Documentation](https://vukan-markovic.github.io/Store/)
+
+**Screenshots**
+
+![Screenshot 1](https://drive.google.com/open?id=1_2vBgPnE9cMrDVlNe3Rq3T8NUroW1JTV)
