@@ -13,4 +13,4 @@ It should also provide the possibility of adding, modifying and deleting data on
 
 **Screenshots**
 
-![Screenshot_1](https://drive.google.com/open?id=1_2vBgPnE9cMrDVlNe3Rq3T8NUroW1JTV/edit)
+![Screenshot_1](https://cdn1.imggmi.com/uploads/2018/10/9/6536023eafe4c99e02129e976711be77-full.png)
